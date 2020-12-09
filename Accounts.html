@@ -1,0 +1,159 @@
+<html>
+<title>Accounts</title>
+<head>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="main2.css">
+</head>
+<body>
+<div class="header">
+<div class="header2"></div>
+  <div class="circle-ms">MS</div><a href="about.html" class="logo">MOSHISHOP</a>
+  <div class="header-right">
+    <a class="moshi" href="about.html">MoshiShop</a>
+    <a href="Accounts.html">Account</a>
+    <a href="Notifications.html">Notifications</a>
+    <a href="Cart.html">Cart</a>
+    <a href="SOU.html">Sell on MS</a>
+    <a class="active" href="index.html">Home</a>
+  </div>
+</div>
+<div class="main-sep"></div>
+<div class="main">
+<div class="row">
+  <div class="col-251">
+  <div class="container">
+  <a class="side" href="#Account">Account</a>
+  <a class="side" href="#Account Settings">Account Settings</a>
+  <a class="side" href="#Manage MoshiCard">Manage MoshiCard</a>
+  <a class="side" href="#Theme">Theme</a>
+  <a class="side" href="#Privacy">Privacy</a>
+  <a class="side" href="#Help Centre">Help Centre</a>
+  <a class="side" href="#Logout">Logout</a>
+    </div>
+  </div>
+  <div class="col-50">
+    <div class="container">
+        <div class="row">
+          <div class="col-50">
+            <h3>Account</h3>
+			<div class="row">
+              <div class="col-50">
+                <input type="text" id="fn" name="firstname" placeholder="First">
+              </div>
+              <div class="col-50">
+                <input type="text" name="lastname" placeholder="Last">
+              </div>
+			  <div class="col-50">
+                <input type="text" name="dateofbirth" placeholder="Date of birth">
+              </div>
+              <div class="col-50">
+			  <select id="Gender" name="Gender">
+				<option value="Gender">Gender</option>
+				<option value="canada">Male</option>
+				<option value="usa">Female</option>
+				<option value="usa">Other</option>
+			</select>
+              </div>
+			  <div class="col-50">
+                <input type="text" name="ac" placeholder="Area Code">
+              </div>
+              <div class="col-50">
+                <input type="text" name="pn" placeholder="Phone number">
+              </div>
+            </div>
+            <input type="text" name="st" placeholder="Street Address">
+            <input type="text" name="st2" placeholder="Street Address 2">
+			<div class="row">
+              <div class="col-50">
+                <input type="text" name="city" placeholder="City">
+              </div>
+              <div class="col-50">
+                <input type="text" name="sp" placeholder="State Province">
+              </div>
+			  <div class="col-50">
+                <input type="text" name="pzp" placeholder="Postal/Zip Code">
+              </div>
+              <div class="col-50">
+			  <select id="country" name="Country">
+				<option value="Gender">Country</option>
+				<option value="canada">Philippines</option>
+				<option value="usa">USA</option>
+				<option value="usa">China</option>
+				<option value="canada">Japan</option>
+				<option value="usa">Korea</option>
+				<option value="usa">Singapore</option>
+			</select>
+              </div>
+            </div>
+			<input type="text" name="chn" placeholder="Card holder's name">
+            <input type="text" name="cn" placeholder="Card Number">
+          </div>
+        </div>
+		<label for="cname">Expiry</label>
+		<div class="row">
+			  <div class="col-25">
+                <input type="text" name="m&y" placeholder="MM/YYYY">
+              </div>
+              <div class="col-25">
+                <input type="text" name="cvc" placeholder="CVC">
+              </div>
+              <div class="col-25">
+				<div class="demo-solution--flexbox">
+				<img width="32" height="25" src="128lock.png" alt="" />
+					<span>128-bit secured</span>
+				</div>
+              </div>
+			  <input id="myBtn" class="subb" type="submit" value="Submit">
+         </div>
+    </div>
+  </div>
+  <div class="col-25">
+    <div class="container2">
+    <center><img class="userlogin" src="user.png" width="253" height="200"></center>
+      <hr>
+			<input type="text" name="email-login" placeholder="Email ">
+            <input type="password" name="password-login" placeholder="Password">
+			<input type="submit" value="Login / Create an account">
+    </div>
+  </div>
+</div>
+</div>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="sou-login-container">
+    <center><h1 style="color:black;"><br>Thank you!</h1></center>
+    </div>
+  </div>
+</div>
+<div class="seperator"></div>
+<script>
+
+var modal = document.getElementById("myModal");
+
+
+var btn = document.getElementById("myBtn");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>

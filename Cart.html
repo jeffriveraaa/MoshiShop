@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<title>Cart</title>
+<head>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="main2.css">
+</head>
+<body>
+<div class="header">
+<div class="header2"></div>
+  <div class="circle-ms">MS</div><a href="about.html" class="logo">MOSHISHOP</a>
+  <div class="header-right">
+    <a class="moshi" href="about.html">MoshiShop</a>
+    <a href="Accounts.html">Account</a>
+    <a href="Notifications.html">Notifications</a>
+    <a href="Cart.html">Cart</a>
+    <a href="SOU.html">Sell on MS</a>
+    <a class="active" href="index.html">Home</a>
+  </div>
+</div>
+<div class="main-sep"></div>
+<div class="main">
+<div class="row">
+  <div class="col-501">
+    <div class="cart-container">
+        <div class="row2">
+          <div class="col-50">
+            <h3>Item(s) in your cart</h3>
+			<div class="cart-content">
+				<h1 style="color: #b3b3b3;">No items :(</h1>
+			</div>
+			<div class="cart-footer"></div>
+          </div>
+        </div>
+		<div class="souseperator"></div>
+		<div class="row2">
+          <div class="col-50">
+            <h3>Upcoming orders</h3>
+			<div class="cart-content">
+				<h1 style="color: #b3b3b3;">No upcoming orders.</h1>
+			</div>
+			<div class="cart-footer"></div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="col-254">
+    <div class="notif-container2">
+          <div class="col-50">
+		  <div class="feedback-header">
+            <h1>Recommended for you!</h1>
+		</div>
+<div class="feedback-content">
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img id="slidesimg" src="ItemVacuumRectangle.jpg">
+  <div class="ss-text">Hand Vacuum Reconnect Original</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img id="slidesimg" src="ItemGlassesRectangle.jpg">
+  <div class="ss-text">Glasses [Clear] Authenthic</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img  id="slidesimg" src="airpod.jpg">
+  <div class="ss-text">Airpods Apple Original 100%</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img id="slidesimg" src="facemask.jpg">
+  <div class="ss-text">Facemask [Surgical] 10 Pieces</div>
+</div>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <input id="myBtn" class="checkout" type="submit" value="Check out">
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="myModal" class="modal">
+  <div class="recommended-content">
+    <span class="close">&times;</span>
+    <div class="recommended-container">
+<div id="popgallery" class="gallery">
+  <a target="_blank" href="ItemVacuumRectangle.jpg">
+    <img src="ItemVacuumRectangle.jpg">
+  </a>
+  <div id="popupdesc" class="desc">Airpods Apple Original 100%</div>
+  <center><button id="popupup-btn" class="btn">Add to cart</button></center>
+</div>
+
+<div id="popgallery" class="gallery">
+  <a target="_blank" href="ItemAirpodsRectangle.jpg">
+    <img src="ItemAirpodsRectangle.jpg">
+  </a>
+  <div id="popupdesc" class="desc">Airpods Apple Original 100%</div>
+  <center><button id="popupup-btn" class="btn">Add to cart</button></center>
+</div>
+
+<div id="popgallery" class="gallery">
+  <a target="_blank" href="ItemGlassesRectangle.jpg">
+    <img src="ItemGlassesRectangle.jpg">
+  </a>
+  <div id="popupdesc" class="desc">Airpods Apple Original 100%</div>
+  <center><button id="popupup-btn" class="btn">Add to cart</button></center>
+</div>
+
+<div id="popgallery" class="gallery">
+  <a target="_blank" href="ItemMaskRectangle.jpg">
+    <img src="ItemMaskRectangle.jpg">
+  </a>
+  <div id="popupdesc" class="desc">Airpods Apple Original 100%</div>
+  <center><button id="popupup-btn" class="btn">Add to cart</button></center>
+</div>
+    </div>
+  </div>
+</div>
+<div class="seperator"></div>
+<div class="seperator"></div>
+<div class="seperator"></div>
+<script>
+
+
+var modal = document.getElementById("myModal");
+
+
+var btn = document.getElementById("myBtn");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+
+
+</body>
+</html>
