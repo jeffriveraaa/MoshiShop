@@ -1365,6 +1365,14 @@ h1.h1-seperator {
     overflow: auto;
 }
 
+div.popupdesc2 {
+  padding: 15px;
+  text-align: left;
+  font: 12px Arial, sans-serif;
+  font-weight: bold;
+  color: #1a1a1a;
+  background: #b8c2da;
+}
 
 div.desc {
   padding: 15px;
@@ -1372,6 +1380,7 @@ div.desc {
   font: 15px Arial, sans-serif;
   font-weight: bold;
   color: #1a1a1a;
+  background: #b8c2da;
 }
 
 div.gallery {
