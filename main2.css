@@ -125,6 +125,19 @@ img {vertical-align: middle;}
   cursor: pointer;
 }
 
+.close2 {
+  color: #212121;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close2:hover,
+.close2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 .buttoncontainer {
   justify-content: space-between;
@@ -305,6 +318,26 @@ textarea {
   color: white;
 }
 
+#usersnotification{
+  padding: 12px;
+  background-color: #F5F5F5;
+  border-style: 0px solid;
+  border-color: #ffffff;
+}
+
+#notifications-user-text{
+	font-size: 18px;
+    color: #f44336;
+	text-align: left;
+}
+
+#notifications-user-text2{
+	font-size: 12px;
+	font-weight: bold;
+    color: #212121;
+	text-align: left;
+}
+
 .cart-content {
   border: 1px solid #f7f7f7;
   border-radius: 3px;
@@ -382,6 +415,16 @@ h5 {
    text-align: center;
    margin-top: 23%;
    color: #b3b3b3;
+}
+
+#feedbacktext{
+   font-size: 15px;
+}
+
+#feeedbackh1 {
+   font-size: 25px;
+   text-align : center;
+   color: white;
 }
 
 .userlogin
@@ -538,6 +581,11 @@ input[type=submit]:hover {
   padding: 5px 20px 15px 20px;
   border: 0px solid lightgrey;
   border-radius: 3px;
+}
+
+#feedbackcontainer {
+  height: auto;
+  overflow: auto;
 }
 
 .SOU-container {

@@ -1,3 +1,11 @@
+#myBtn{
+  padding: 5px 32px;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #8c8c8c;
+}
+
+
 .header {
   overflow: hidden;
   background-color: #ffffff;
@@ -562,6 +570,12 @@ div.gallery-next {
 div.gallery2 img {
   width: 100%;
   height: 100px;
+}
+
+@media only screen and (max-width: 1360px) {
+ div.desc {
+  font: 10.7px Arial, sans-serif;
+ }
 }
 
 @media only screen and (max-width: 1010px) {

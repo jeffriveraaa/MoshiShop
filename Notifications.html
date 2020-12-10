@@ -29,7 +29,24 @@
             <center><h3>Notifications</h3></center>
 			<div class="row">
               <div class="col-50">
-				<h5>No new notifications!</h5>
+			<div id="usersnotification" class="feedback-header">
+				<span onclick="this.parentElement.style.display='none'"
+				class="close2">&times;</span>
+				<h1 id="notifications-user-text"><b>12.12 Big Christmas Sale</b></h1>
+				<h1 id="notifications-user-text2">12.12 Sale is now on going!!!</h1>
+			</div>
+			<div id="usersnotification" class="feedback-header">
+				<span onclick="this.parentElement.style.display='none'"
+				class="close2">&times;</span>
+				<h1 id="notifications-user-text"><b>10% Off Voucher For You!</b></h1>
+				<h1 id="notifications-user-text2">Be one of the first 4000 users to use this MoshiPay voucher and enjoy 10% off on your next Unilever purchase!</h1>
+			</div>
+			<div id="usersnotification" class="feedback-header">
+				<span onclick="this.parentElement.style.display='none'"
+				class="close2">&times;</span>
+				<h1 id="notifications-user-text"><b>Free Shipping with MoshiShop</b></h1>
+				<h1 id="notifications-user-text2">Enjoy Free Shipping at 0PHP minimum spend, SITEWIDE when you shop with MoshiPay today! Dont miss flash vouchers, digital goods, and more now!</h1>
+			</div>
               </div>
             </div>
           </div>
@@ -43,12 +60,9 @@
             <h1>Feedback</h1>
 		</div>
 <div class="feedback-content">
-  <p>Some content blablabla, some content blablabla.</p>
-  <p>Some content blablabla, some content blablabla.</p>
-   <p>Some content blablabla, some content blablabla.</p>
-   <p>Some content blablabla, some content blablabla.</p>
-   <p>Some content blablabla, some content blablabla.</p>
-  <p>Some content blablabla, some content blablabla.</p>
+  <p><b>Jay Carlo Tiamzon</b><br><br>Shopping in MoshiShop was very convenient and so helful. Since this year was worst specially going outside it helps me alot, also fast delivery it took only 2-5 days to arrive.</p>
+  <p><b>Jam Dayao<br><br></b>Customer service is fast and refunds are automatic, no need to wait which is far from that with shopee. Delivery is commendable.</p>
+    <input id="myBtn" class="checkout" type="submit" value="Show more...">
 </div>
 </div>
 <hr style="border:3px solid #f1f1f1">
@@ -88,7 +102,69 @@
 </div>
 </div>
 </div>
+<div id="myModal" class="modal">
+  <div class="recommended-content">
+    <span class="close">&times;</span>
+    <div id="feedbackcontainer" class="recommended-container">
+		<div class="feedback-header">
+	    <h1 id="feeedbackh1">Feedback from customers</h1>
+		</div>
+		<p id="feedbacktext"><b>Barbie Imperial - Very Good</b><br><br>All dress and stuffs are beautiful, i love them. Its easy to shop. Very convient and helful since this time's pandemic.</p>
+		<p id="feedbacktext"><b>Liza Soberano - Very Good<br><br></b>I'm a regular customer of MoshiShop... Everything I ordered are perfect and with big discounts! I'm not sure how come other people having bad experiences... when all my orders were perfect from nike shoes, onitsuka tiger, under armour duffle bag, nike and adidas leggings, blouses, dresses, fossil watch, mango pants and more..</p>
+		<p id="feedbacktext"><b>Kyle Espino - Good<br><br></b>I have a total of 6 items bought from MoshiShop a week and a half ago. 3 of them are out of stock but was told it will arrive next week. I bought 3 more items yesterday and was told ETA within a week. The courier is friendly and accommodating. I was not home during the first attempt to deliver my items. I asked the courier to come back on the same day after an hour and he did. So far I like MoshiShop.</p>
+		<p id="feedbacktext"><b>Ramon Pineda - Good<br><br></b>Thanks MoshiShop for the item it was so good and perfect. I love the slippers but my only problem is the delivery is too long 45 days due to ECQ. Anyway it's worth the wait because I love the item. Looking for another items again soon. Stay safe and God Bless...</p>
+	</div>
+  </div>
+</div>
 <div class="seperator"></div>
 <div class="seperator"></div>
+<script>
+
+
+var modal = document.getElementById("myModal");
+
+
+var btn = document.getElementById("myBtn");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
 </body>
 </html>
